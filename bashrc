@@ -1,4 +1,6 @@
-alias ls='exa'
+if type exa >/dev/null 2>&1; then
+    alias ls='exa'
+fi
 alias ll='ls -l'
 alias la='ls -al'
 
