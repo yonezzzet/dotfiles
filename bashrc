@@ -4,8 +4,10 @@ fi
 alias ll='ls -l'
 alias la='ls -al'
 
-alias vim=/Applications/MacVim.app/Contents/bin/vim "$@"
-alias mvim=/Applications/MacVim.app/Contents/bin/mvim "$@"
+if [ -e /Applications/MacVim.app/Contents/bin/vim ]; then
+    alias vim=/Applications/MacVim.app/Contents/bin/vim "$@"
+    alias mvim=/Applications/MacVim.app/Contents/bin/mvim "$@"
+fi
 
 alias memo='vim ~/Dropbox/note/memo.md'
 
