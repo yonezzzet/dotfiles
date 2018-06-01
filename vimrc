@@ -31,3 +31,4 @@ nnoremap <S-UP> :bp<CR>
 nnoremap <S-DOWN> :bn<CR>
 nnoremap <S-LEFT> gT
 nnoremap <S-RIGHT> gt
+
