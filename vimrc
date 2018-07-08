@@ -16,11 +16,17 @@ set directory^=$HOME/.vim/tmp//
 " バックアップファイル(*~)を作らない
 set nobackup
 
+" Make/GoBuild等の時に自動保存
+set autowrite
+
 " バッファ追加時に保存必須でなくす
 set hidden
 let g:netrw_nogx = 1
 
 nmap <ESC><ESC> :noh<CR>
+
+nnoremap j gj
+nnoremap k gk
 
 nnoremap <UP> <C-W>k
 nnoremap <DOWN> <C-W>j
@@ -32,3 +38,12 @@ nnoremap <S-DOWN> :bn<CR>
 nnoremap <S-LEFT> gT
 nnoremap <S-RIGHT> gt
 
+let mapleader = "\<Space>"
+
+" For NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" For Golang
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nnoremap <leader><SPACE> :GoFmt<CR>
